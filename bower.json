@@ -1,0 +1,15 @@
+{
+  "name": "buttercups",
+  "version": "0.0.0",
+  "dependencies": {
+  	"foundation": "zurb/bower-foundation",
+    "font-awesome": "~4.3.0",
+    "bourbon": "~4.2.1",
+    "jquery.scrollTo": "~2.1.0",
+    "jquery-fracs": "0.15.1",
+    "pace": "~1.0.0",
+    "scrollmagic": "~2.0.5",
+    "svg-injector": "~1.1.2",
+    "picturefill": "~2.3.1"
+  }
+}

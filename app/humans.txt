@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Jason Cockerham - Designer/Developer - @jcock
+
+# TECHNOLOGY COLOPHON
+  Standards: HTML5, CSS3, SCSS
+  Foundation 5
+  Yeoman
+  Grunt
+  Bower
+  Sass
+  HTML5 ★ Boilerplate
+  Bourbon

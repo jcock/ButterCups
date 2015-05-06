@@ -1,0 +1,10 @@
+---
+layout: null
+---
+
+# robotstxt.org/
+
+User-agent: *
+Disallow:
+
+Sitemap: {{ site.author.url }}/sitemap.xml

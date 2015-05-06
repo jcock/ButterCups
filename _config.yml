@@ -1,0 +1,125 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: Butter Cups
+description: Butter Cups. Gourmet Cupcakes.
+url: http://www.jcock.rocks
+author:
+  name: Jason Cockerham
+  email: jason@jcock.rocks
+
+  twitter: jcock
+  github: jcock
+  linkedin: jasoncockerham
+  google_plus: +JasonCockerhamRocks
+
+  google_analytics: UA-54478957-1
+  google_verify: CqIX8qMP-9YzT5j6O2ITwq-p0RpcxkbA3UZeEwZcRJw
+  bing_verify: D5EB4D7B4B2096C374CE2AEB1D6EDB32
+
+# Exclude directories and/or files from the conversion.
+# Grunt moves image files and the styles/scripts directories.
+exclude: ['styles', 'scripts', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+# Force inclusion of directories and/or files in the conversion.
+# .htaccess is a good example since dotfiles are excluded by default.
+include: ['apple-touch-icon-57x57.png', 'apple-touch-icon-60x60.png', 'apple-touch-icon-72x72.png', 'apple-touch-icon-76x76.png', 'apple-touch-icon-114x114.png', 'apple-touch-icon-120x120.png', 'apple-touch-icon-144x144.png', 'apple-touch-icon-152x152.png', 'apple-touch-icon-precomposed.png', 'apple-touch-icon.png', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'favicon-160x160.png', 'favicon-196x196.png', 'mstile-70x70.png', 'mstile-144x144.png', 'mstile-150x150.png', 'mstile-310x150.png', 'mstile-310x310.png', 'web.config' ]
+
+# Default post path style
+# date  /:categories/:year/:month/:day/:title.html
+# pretty  /:categories/:year/:month/:day/:title/
+# none  /:categories/:title.html
+permalink: pretty
+
+# Publish posts with future date.
+# _config.build.yml sets this to false on `grunt build`
+future: true
+
+# Compile posts in the _drafts directory.
+# _config.build.yml sets this to false on `grunt build`
+show_drafts: false
+
+# Split posts over multiple subdirectories called “page2”, “page3”, … “pageN”
+paginate: 1
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: redcarpet
+# Markdown library options
+# redcarpet:
+  # extensions: ['fenced_code_blocks', 'smart']
+
+
+# ----------------------- #
+#        Plugins          #
+# ----------------------- #
+
+# Jekyll picture
+picture:
+  source: images
+  output: generated
+  markup: picture
+  presets:
+    # Full width pictures
+    default:
+      ppi: [1]
+      attr:
+        class: align-center
+      source_lrg:
+        media: '(min-width: 1024px)'
+        width: 716
+      source_med:
+        media: '(min-width: 640px)'
+        width: 550
+      source_default:
+        width: 640
+    # Half width pictures
+    half:
+      ppi: [1]
+      attr:
+        class: align-center
+      source_lrg:
+        media: '(min-width: 1024px)'
+        width: 360
+      source_med:
+        media: '(min-width: 640px)'
+        width: 275
+      source_default:
+        width: 250
+    cupcake:
+      ppi: [1]
+      attr:
+        class: img-cupcake
+      source_lrg:
+        media: '(min-width: 1024px)'
+        width: 1088
+      source_med:
+        media: '(min-width: 640px)'
+        width: 970
+      source_default:
+        width: 610
+    jumbotron:
+      ppi: [1]
+      attr:
+        class: align-center
+      source_xlrg:
+        media: '(min-width: 1440px)'
+        width: 1920
+      source_lrg:
+        media: '(min-width: 1024px)'
+        width: 1440
+      source_med:
+        media: '(min-width: 640px)'
+        width: 1024
+      source_default:
+        width: 640
+
+# Jekyll Sitemap
+sitemap:
+    file: "/sitemap.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
