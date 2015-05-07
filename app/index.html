@@ -2,82 +2,135 @@
 layout: default
 class: home
 ---
-<section id="intro" class="frac jumbotron">
-	<a class="brand" href="/">
-		<img id="rush-brand" class="svg-inject brand-img" data-src="img/brand/butter-cups.svg" data-fallback="img/brand/butter-cups.png" alt="Butter Cups" />
-	</a>
-	<h1>Gourmet Cupcakes</h1>
+<section id="intro" class="jumbotron content-section">
+	<div class="decoration decoration--cupcakes">
+		<ul class="small-block-grid-4">
+			<li>{% picture cupcake cupcakes/cupcake-pink.png alt="" %}</li>
+			<li>{% picture cupcake cupcakes/cupcake-chocolate.png alt="" %}</li>
+			<li>{% picture cupcake cupcakes/cupcake-green.png alt="" %}</li>
+			<li>{% picture cupcake cupcakes/cupcake-cherry.png alt="" %}</li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="small-10 small-centered medium-8 large-6 columns">
+			<div class="brand">
+				<img id="rush-brand" class="svg-inject brand-img" data-src="img/brand/butter-cups.svg" data-fallback="img/brand/butter-cups.png" alt="Butter Cups" />
+			</a>
+			<div class="banner mts">
+				<h1 class="banner--title">Gourmet Cupcakes</h1>
+			</div>
+		</div>
+	</div>
 </section>
-<section id="about" class="frac about">
-    <h1>Specialty cupcakes for those special moments</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla porta, euismod orci in, blandit mauris. Nam consectetur dapibus ante, eget venenatis enim vestibulum ac. Praesent nec commodo elit. Praesent ac eros sit amet est feugiat faucibus sit amet et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla porta, euismod orci in.</p>
+
+<section id="about" class="frac about content-section">
+	<div class="row">
+		<div class="small-10 small-offset-2 medium-7 medium-offset-5 large-6 large-offset-6 columns">
+			<h1 class="color-primary">Specialty cupcakes for those special&nbsp;moments</h1>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla porta, euismod orci in, blandit mauris. Nam consectetur dapibus ante, eget venenatis enim vestibulum ac. Praesent nec commodo elit. Praesent ac eros sit amet est feugiat faucibus sit amet et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla porta, euismod orci in.</p>
+		</div>
+
+		<div class="decoration decoration--cupcakes">
+			{% picture cupcake cupcakes/cupcake-cherry.png alt="" %}
+		</div>
+	</div>
 </section>
-<section id="flavors" class="frac flavors">
-    <h1>Cupcake Flavors</h1>
-    <div class="flavors--menu">
-    	<dl>
-			<dt>Apple Crumb</dt>
-			<dd>Apple cake with a crumb topping and cream cheese frosting</dd>
-			<dt>Bananas Foster</dt>
-			<dd>Banana cake with rum brown sugar frosting and caramel drizzle</dd>
-			<dt>Brown Butter Pear</dt>
-			<dd>Vanilla bean frosting and a rum/caramel drizzle</dd>
-			<dt>Carrot Cake</dt>
-			<dd>Carrot cake with orange buttercream frosting</dd>
-			<dt>Caramel Apple</dt>
-			<dd>Apple cinnamon cake with cinnamon frosting and caramel drizzle</dd>
-			<dt>Carrot Pumpkin Cake</dt>
-			<dd>Carrot pumpkin cake with orange buttercream frosting</dd>
-			<dt>Chocolate Chip</dt>
-			<dd>Chocolate chip cake with chocolate buttercream frosting</dd>
-			<dt>Choclate Covered Bacon</dt>
-			<dd>Chocolate cake with chocolate/bacon frosting and bacon pieces</dd>
-			<dt>Chocolate Covered Banana</dt>
-			<dd>Banana cake with chocolate frosting</dd>
-			<dt>Chocolate Peanut Butter Cup</dt>
-			<dd>Chocolate/chocolate chip cake with peanut butter frosting and a mini peanut butter cup on top</dd>
-			<dt>Chocolate Covered Pretzel</dt>
-			<dd>Chocolate cake with bits of pretzel and sea salt chocolate frosting</dd>
-			<dt>Chocolate Cupcake</dt>
-			<dd>with a choice of frosting</dd>
-			<dt>Chocolate Truffle</dt>
-			<dd>Chocolate cake with a warm truffle center - No frosting on this cupcake (best warmed before serving)</dd>
-			<dt>Chocolate Turtle</dt>
-			<dd>Chocolate pecan cake with chocolate frosting and topped with caramel and toasted pecans</dd>
-			<dt>German Chocolate</dt>
-			<dd>Chocolate cake with chocolate/brown sugar/coconut frosting</dd>
-			<dt>Irish Car Bomb</dt>
-			<dd>Guinness© chocolate cake with Jameson© buttercream frosting and an irish cream drizzle</dd>
-			<dt>Lavender Vanilla</dt>
-			<dd>Lavender vanilla cake with vanilla frosting and a lavender drizzle</dd>
-			<dt>Lemon Meringue</dt>
-			<dd>Lemon cake with a meringue topping</dd>
-			<dt>Lemon Raspberry</dt>
-			<dd>Lemon cake with a fresh raspberry center and raspberry frosting</dd>
-			<dt>Painkiller</dt>
-			<dd>Pineapple cake with Painkiller frosting - (similar to a pina coloda with nutmeg)</dd>
-			<dt>Peppermint Bark</dt>
-			<dd>Dark chocolate cake with white chocolate frosting and crushed peppermints</dd>
-			<dt>Peppermint Patty</dt>
-			<dd>Chocolate cake with mint buttercream frosting</dd>
-			<dt>Red Velvet</dt>
-			<dd>Red velvet cake with vanilla bean buttercream frosting</dd>
-			<dt>Strawberry Champagne</dt>
-			<dd>Strawberry cake with champagne frosting</dd>
-			<dt>Tiramisu</dt>
-			<dd>Tiramisu cake with marscapone frosting</dd>
-			<dt>Triple Chocolate Threat</dt>
-			<dd>Dark chocolate cake with chocolate chips and chocolate frosting</dd>
-			<dt>Vanilla Cupcake</dt>
-			<dd>with a choice of frosting</dd>
-			<dt>White Chocolate Peach</dt>
-			<dd>White chocolate cake with chunks of peaches and vanilla bean buttercream frosting</dd>
-			<dt>White Chocolate Raspberry</dt>
-			<dd>White chocolate cake with a fresh raspberry center and orange or raspberry buttercream frosting</dd>
-		</dl>
-		<p>If you have any custom flavors you would like to suggest, please let me know and I may be able to accommodate it.</p>
-    </div>
+
+<section id="flavors" class="frac flavors content-section">
+	<div class="row">
+		<div class="small-10 small-centered medium-8 medium-centered large-6 columns">
+		    <div class="banner">
+				<h1 class="banner--title">Gourmet Cupcakes</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="flavors-menu">
+			<div class="medium-8 medium-centered columns">
+			    <div class="row">
+			    	<div class="small-6 columns">
+			    		<dl class="flavors-menu--list">
+							<dt class="flavor--name color-primary">Apple Crumb</dt>
+							<dd class="flavor--desc color-secondary">Apple cake with a crumb topping and cream cheese frosting</dd>
+							<dt class="flavor--name color-primary">Bananas Foster</dt>
+							<dd class="flavor--desc color-secondary">Banana cake with rum brown sugar frosting and caramel drizzle</dd>
+							<dt class="flavor--name color-primary">Brown Butter Pear</dt>
+							<dd class="flavor--desc color-secondary">Vanilla bean frosting and a rum/caramel drizzle</dd>
+							<dt class="flavor--name color-primary">Carrot Cake</dt>
+							<dd class="flavor--desc color-secondary">Carrot cake with orange buttercream frosting</dd>
+							<dt class="flavor--name color-primary">Caramel Apple</dt>
+							<dd class="flavor--desc color-secondary">Apple cinnamon cake with cinnamon frosting and caramel drizzle</dd>
+							<dt class="flavor--name color-primary">Carrot Pumpkin Cake</dt>
+							<dd class="flavor--desc color-secondary">Carrot pumpkin cake with orange buttercream frosting</dd>
+							<dt class="flavor--name color-primary">Chocolate Chip</dt>
+							<dd class="flavor--desc color-secondary">Chocolate chip cake with chocolate buttercream frosting</dd>
+							<dt class="flavor--name color-primary">Choclate Covered Bacon</dt>
+							<dd class="flavor--desc color-secondary">Chocolate cake with chocolate/bacon frosting and bacon pieces</dd>
+							<dt class="flavor--name color-primary">Chocolate Covered Banana</dt>
+							<dd class="flavor--desc color-secondary">Banana cake with chocolate frosting</dd>
+							<dt class="flavor--name color-primary">Chocolate Peanut Butter Cup</dt>
+							<dd class="flavor--desc color-secondary">Chocolate/chocolate chip cake with peanut butter frosting and a mini peanut butter cup on top</dd>
+							<dt class="flavor--name color-primary">Chocolate Covered Pretzel</dt>
+							<dd class="flavor--desc color-secondary">Chocolate cake with bits of pretzel and sea salt chocolate frosting</dd>
+							<dt class="flavor--name color-primary">Chocolate Cupcake</dt>
+							<dd class="flavor--desc color-secondary">with a choice of frosting</dd>
+							<dt class="flavor--name color-primary">Chocolate Truffle</dt>
+							<dd class="flavor--desc color-secondary">Chocolate cake with a warm truffle center - No frosting on this cupcake (best warmed before serving)</dd>
+							<dt class="flavor--name color-primary">Chocolate Turtle</dt>
+							<dd class="flavor--desc color-secondary">Chocolate pecan cake with chocolate frosting and topped with caramel and toasted pecans</dd>
+							<dt class="flavor--name color-primary">German Chocolate</dt>
+							<dd class="flavor--desc color-secondary">Chocolate cake with chocolate/brown sugar/coconut frosting</dd>
+						</dl>
+			    	</div>
+			    	<div class="small-6 columns">
+			    		<dl class="flavors-menu--list">
+							<dt class="flavor--name color-primary">Irish Car Bomb</dt>
+							<dd class="flavor--desc color-secondary">Guinness<sup>&copy;</sup> chocolate cake with Jameson<sup>&copy;</sup> buttercream frosting and an irish cream drizzle</dd>
+							<dt class="flavor--name color-primary">Lavender Vanilla</dt>
+							<dd class="flavor--desc color-secondary">Lavender vanilla cake with vanilla frosting and a lavender drizzle</dd>
+							<dt class="flavor--name color-primary">Lemon Meringue</dt>
+							<dd class="flavor--desc color-secondary">Lemon cake with a meringue topping</dd>
+							<dt class="flavor--name color-primary">Lemon Raspberry</dt>
+							<dd class="flavor--desc color-secondary">Lemon cake with a fresh raspberry center and raspberry frosting</dd>
+							<dt class="flavor--name color-primary">Painkiller</dt>
+							<dd class="flavor--desc color-secondary">Pineapple cake with Painkiller frosting - (similar to a pina coloda with nutmeg)</dd>
+							<dt class="flavor--name color-primary">Peppermint Bark</dt>
+							<dd class="flavor--desc color-secondary">Dark chocolate cake with white chocolate frosting and crushed peppermints</dd>
+							<dt class="flavor--name color-primary">Peppermint Patty</dt>
+							<dd class="flavor--desc color-secondary">Chocolate cake with mint buttercream frosting</dd>
+							<dt class="flavor--name color-primary">Red Velvet</dt>
+							<dd class="flavor--desc color-secondary">Red velvet cake with vanilla bean buttercream frosting</dd>
+							<dt class="flavor--name color-primary">Strawberry Champagne</dt>
+							<dd class="flavor--desc color-secondary">Strawberry cake with champagne frosting</dd>
+							<dt class="flavor--name color-primary">Tiramisu</dt>
+							<dd class="flavor--desc color-secondary">Tiramisu cake with marscapone frosting</dd>
+							<dt class="flavor--name color-primary">Triple Chocolate Threat</dt>
+							<dd class="flavor--desc color-secondary">Dark chocolate cake with chocolate chips and chocolate frosting</dd>
+							<dt class="flavor--name color-primary">Vanilla Cupcake</dt>
+							<dd class="flavor--desc color-secondary">with a choice of frosting</dd>
+							<dt class="flavor--name color-primary">White Chocolate Peach</dt>
+							<dd class="flavor--desc color-secondary">White chocolate cake with chunks of peaches and vanilla bean buttercream frosting</dd>
+							<dt class="flavor--name color-primary">White Chocolate Raspberry</dt>
+							<dd class="flavor--desc color-secondary">White chocolate cake with a fresh raspberry center and orange or raspberry buttercream frosting</dd>
+						</dl>
+			    	</div>
+			    </div>
+				<p class="color-primary text-center mtm"><small>If you have any custom flavors you would like to suggest, please let me know and I may be able to accommodate it.</small></p>
+	    	</div>
+	    </div>
+	    <div class="decoration decoration--cupcakes">
+			{% picture cupcake cupcakes/cupcake-green.png alt="" %}
+		</div>
+	</div>
 </section>
-<section id="order" class="frac order">
-    <h1>Ready to order? <span>Call us at <span class="tel">302.388.9007</span></span></h1>
+
+<section id="order" class="frac order content-section bg-tertiary">
+	<div class="row">
+		<div class="small-10 small-offset-2 medium-8 medium-offset-4 columns">
+    		<h1 class="color-white mvn">Ready to order? <span>Call us at <span class="tel color-primary">302.388.9007</span></span></h1>
+		</div>
+		<div class="decoration decoration--cupcakes">
+			{% picture cupcake cupcakes/cupcake-chocolate.png alt="" %}
+		</div>
+	</div>
 </section>

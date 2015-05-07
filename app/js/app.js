@@ -1,5 +1,7 @@
 'use strict';
 
+$(document).foundation();
+
 // DOM ready:
 $(function () {
 	$('html').removeClass('no-js');

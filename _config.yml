@@ -58,13 +58,13 @@ markdown: redcarpet
 
 # Jekyll picture
 picture:
-  source: images
-  output: generated
+  source: img
+  output: gen
   markup: picture
   presets:
     # Full width pictures
     default:
-      ppi: [1]
+      ppi: [1, 1.5, 2]
       attr:
         class: align-center
       source_lrg:
@@ -77,7 +77,7 @@ picture:
         width: 640
     # Half width pictures
     half:
-      ppi: [1]
+      ppi: [1, 1.5, 2]
       attr:
         class: align-center
       source_lrg:
@@ -89,19 +89,22 @@ picture:
       source_default:
         width: 250
     cupcake:
-      ppi: [1]
+      ppi: [1, 1.5, 2]
       attr:
         class: img-cupcake
+      source_xlrg:
+        media: '(min-width: 1441px)'
+        width: 640
       source_lrg:
-        media: '(min-width: 1024px)'
-        width: 1088
+        media: '(min-width: 1025px)'
+        width: 550
       source_med:
-        media: '(min-width: 640px)'
-        width: 970
+        media: '(min-width: 641px)'
+        width: 500
       source_default:
-        width: 610
+        width: 500
     jumbotron:
-      ppi: [1]
+      ppi: [1, 1.5, 2]
       attr:
         class: align-center
       source_xlrg:

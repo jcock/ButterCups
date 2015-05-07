@@ -1,14 +1,30 @@
 
 // Base
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+body {
+	font-size: 16px;
+	color: $secondary-color;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-image: url(/img/crumbs.jpg);
+	background-position: 50% 50%;
+	background-repeat: repeat;
+	background-size: 50%;
+	-webkit-font-smoothing: antialiased;
+
+	@media #{$medium-up} {
+		font-size: 2vw;
+	}
+}
+
 ::-moz-selection {
     color: $white;
-    background: #A6BE4B;
+    background: $tertiary-color;
 }
 
 ::selection {
     color: $white;
-    background: #A6BE4B;
+    background: $tertiary-color;
 }
 
 .color-white {
@@ -23,6 +39,10 @@
 	color: $secondary-color;
 }
 
+.color-tertiary {
+	color: $tertiary-color;
+}
+
 .bg-white {
 	background-color: #fff;
 }
@@ -35,18 +55,32 @@
 	background-color: $secondary-color;
 }
 
+.bg-tertiary {
+	background-color: $tertiary-color;
+}
+
+.font-light {
+	font-weight: 300;
+}
+
 .font-normal {
 	font-weight: 400;
 }
 
-.sr-only {
-	position:absolute;
-	width:1px;
-	height:1px;
-	padding:0;
-	margin:-1px;
-	overflow:hidden;
-	clip:rect(0,0,0,0);border:0
+.font-bold {
+	font-weight: 600;
+}
+
+p {
+	font-size: 1em;
+	line-height: inherit;
+}
+
+ul,
+ol,
+dl {
+	font-size: 0.75em;
+	line-height: 1.3;
 }
 
 
@@ -64,13 +98,13 @@
   user-select: none;
 
   & .pace-progress {
-	  background: rgba(darken($primary-color, 10%), 0.75);
+	  background: rgba($tertiary-color, 0.75);
 	  position: fixed;
 	  z-index: 2000;
 	  top: 0;
 	  right: 100%;
 	  width: 100%;
-	  height: 0.5rem;
+	  height: 0.25rem;
 	}
 }
 
@@ -78,8 +112,419 @@
   display: none;
 }
 
-.l-header {
+
+// Buttons
+.btn {
+	cursor: pointer;
+
+	.nav--main .side-nav & {
+		display: block;
+		padding: 0.25em 0.75em;
+		text-align: center;
+		font-size: 3.5em;
+		color: $white;
+		font-weight: 600;
+		line-height: 1;
+		@include transition(color 200ms ease, box-shadow 200ms ease, transform 200ms ease, background 200ms ease);
+
+		@media #{$medium-up} {
+			text-align: right;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $primary-color;
+			background-color: rgba(darken($tertiary-color, 5%), 0.9);
+			@include transform(translateY(2px));
+
+			@media #{$medium-up} {
+				background-color: transparent;
+				box-shadow: -0.125em 0 0 0 $primary-color;
+				@include transform(translateX(0.125em));
+			}
+		}
+	}
+
+	.nav--social.icon-bar & {
+		@include transition(background 200ms ease);
+
+		.fa {
+			font-size: 1em;
+		}
+	}
 }
 
-.l-main {
+
+
+// Navigation
+.nav {
+	&.nav--main {
+		top: 0 !important;
+		right: 0 !important;
+		left: auto !important;
+		height: 100vh;
+		width: rem-calc(300);
+		max-width: 100%;
+		margin: 0;
+		background-color: rgba($tertiary-color, 0.95);
+		border: none;
+		opacity: 0;
+		@include transform(translateY(100%));
+		@include transition(opacity 800ms ease);
+
+		&:focus {
+			outline: none;
+		}
+
+		&.f-open-dropdown {
+			opacity: 1;
+			@include transform(translateY(0));
+		}
+
+		&.f-dropdown {
+			li {
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: transparent;
+				}
+			}
+		}
+
+		.side-nav {
+			padding-top: 6em;
+		}
+	}
+
+	&.nav--social {
+		background-color: transparent;
+		border: solid rgba($white, 0.2);
+		border-width: 1px 0;
+	}
+}
+
+.tab-bar {
+	.l-header & {
+		height: auto;
+		line-height: auto;
+		background-color: transparent;
+
+		.right-small {
+			height: auto;
+			border: none;
+		}
+	}
+}
+
+.toggle-icon {
+	position: absolute;
+	top: 1em;
+	right: 2em;
+	z-index: 100;
+	display: block;
+	width: 2.8125rem;
+	height: 2.8125rem;
+	padding: 0;
+	background-color: rgba($white, 0.7);
+	border-radius: 100%;
+	border: 2px solid $tertiary-color;
+	@include transform(translate3d(0, 0, 0));
+	@include transition(all 200ms ease);
+
+	span {
+		position: absolute;
+		top: 33.33333%;
+		left: 50%;
+		@include transform(translateX(-50%));
+		@include burger(1.5rem, 2px, 4px, #3c2879);
+		@include transition(all 200ms ease);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $primary-color;
+		background-color: $primary-color;
+	}
+
+	&[aria-expanded="true"] {
+		border-color: $primary-color;
+		background-color: $primary-color;
+
+		span {
+			@include burger-to-cross;
+		}
+	}
+}
+
+
+
+// Decorations
+.decoration {
+	&.decoration--cupcakes {
+		.img-cupcake {
+			@include filter(drop-shadow(10px 10px 20px rgba(0,0,0,0.25)));
+		}
+
+		.jumbotron & {
+			position: absolute;
+			top: 0;
+			left: -15%;
+			width: 130%;
+			@include transform(translateY(-50%));
+
+			li {
+				padding: 0;
+
+				&:nth-of-type(1) {
+					@include transform(translateY(20%));
+				}
+				&:nth-of-type(2) {
+					@include transform(translateY(-20%));
+				}
+				&:nth-of-type(3) {
+					@include transform(translateY(-5%));
+				}
+				&:nth-of-type(4) {
+					@include transform(translateY(20%));
+				}
+			}
+		}
+
+		.about &,
+		.flavors &,
+		.order & {
+			position: absolute;
+			top: 0;
+		}
+
+		.about & {
+			left: 0;
+			width: 40%;
+			@include transform(translate(-50%, 0));
+
+			@media #{$medium-up} {
+				@include transform(translate(0, 0));
+			}
+		}
+
+		.flavors & {
+			right: 0;
+			z-index: 1;
+			width: 40%;
+			@include transform(translate(50%, -20%));
+		}
+
+		.order & {
+			left: 0;
+			z-index: 1;
+			width: 40%;
+			@include transform(translate(-50%, -60%));
+		}
+	}
+}
+
+
+
+// Banner
+.banner {
+	position: relative;
+	padding: 0.75em 0;
+	background-color: #fff;
+	border: 2px solid $primary-color;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		z-index: -1;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: $primary-color;
+		border-radius: 100%;
+	}
+
+	&::before {
+		left: 0;
+		@include transform(translate(-50%, -50%));
+	}
+
+	&::after {
+		right: 0;
+		@include transform(translate(50%, -50%));
+	}
+
+	.banner--title {
+		position: relative;
+		margin: 0;
+		color: $primary-color;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.25em;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			width: 1.25rem;
+			height: 1.25rem;
+			background-color: $white;
+			border-radius: 100%;
+		}
+
+		&::before {
+			left: 0;
+			@include transform(translate(-50%, -50%));
+		}
+
+		&::after {
+			right: 0;
+			@include transform(translate(50%, -50%));
+		}
+	}
+}
+
+
+
+// Flavors Menu
+.flavors-menu {
+	position: relative;
+	overflow: hidden;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+	background-color: #f6f7f8;
+	box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.1);
+
+	@media #{$medium-up} {
+		margin-top: 6rem;
+		margin-bottom: 6rem;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+	}
+
+	&::before {
+		left: 50%;
+		height: 3em;
+		width: 33.33333%;
+		background-image: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.025) 50%);
+		background-size: 25% 25%;
+		@include transform(translateX(-50%));
+
+		@media #{$medium-up} {
+			background-size: 12.5% 12.5%;
+		}
+	}
+
+	&::after {
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-color: #f6f7f8;
+		box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.1);
+		@include transform(rotate(-4deg));
+	}
+
+	.flavor--name {
+		margin-top: 1.5em;
+	}
+}
+
+
+
+// Sections
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Content Blocks
+.content-section .row {
+	position: relative;
+}
+
+// Jumbotron
+.jumbotron {
+	position: relative;
+	padding: 20vw 2em 5vw;
+	text-align: center;
+
+	@media #{$medium-up} {
+		padding: 20vw 2em 10vw;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 5em;
+		width: 33.33333%;
+		background-image: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.03) 50%);
+		background-size: 25% 25%;
+		@include transform(translateX(-50%));
+
+		@media #{$medium-up} {
+			background-size: 12.5% 12.5%;
+		}
+	}
+}
+
+
+// About
+.about {
+	padding: 10vw 2em 20vw;
+
+	h1 {
+		margin-top: 2em;
+	}
+}
+
+
+// Order
+.order {
+	position: relative;
+	padding: 3em 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 2em;
+		width: 33.33333%;
+		background-image: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.1) 50%);
+		background-size: 25% 25%;
+		@include transform(translateX(-50%));
+
+		@media #{$medium-up} {
+			background-size: 12.5% 12.5%;
+		}
+	}
+
+	h1 {
+		font-size: 1.5em;
+
+		span {
+			display: block;
+			font-size: 1.75em;
+
+			@media #{$medium-up} {
+				font-size: 2em;
+			}
+		}
+
+		.tel {
+			display: inline;
+			font-size: 1em;
+		}
+	}
 }
