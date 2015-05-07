@@ -1,9 +1,8 @@
 'use strict';
 
-$(document).foundation();
-
 // DOM ready:
 $(function () {
+	$(document).foundation();
 	$('html').removeClass('no-js');
 
 	// Init common modules
@@ -82,7 +81,7 @@ var app = app || {
 				// Options
 				var injectorOptions = {
 					evalScripts: 'once',
-					pngFallback: '/images'
+					pngFallback: '/img'
 				};
 
 				// Trigger the injection

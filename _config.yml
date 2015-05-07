@@ -8,16 +8,16 @@ description: Butter Cups. Gourmet Cupcakes.
 url: http://www.jcock.rocks
 author:
   name: Jason Cockerham
+  phone: 302-388-9007
   email: jason@jcock.rocks
 
+  facebook: jcock
   twitter: jcock
-  github: jcock
-  linkedin: jasoncockerham
-  google_plus: +JasonCockerhamRocks
+  instagram: jcock
 
-  google_analytics: UA-54478957-1
-  google_verify: CqIX8qMP-9YzT5j6O2ITwq-p0RpcxkbA3UZeEwZcRJw
-  bing_verify: D5EB4D7B4B2096C374CE2AEB1D6EDB32
+  google_analytics: # UA-54478957-1
+  google_verify: # CqIX8qMP-9YzT5j6O2ITwq-p0RpcxkbA3UZeEwZcRJw
+  bing_verify: # D5EB4D7B4B2096C374CE2AEB1D6EDB32
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and the styles/scripts directories.
@@ -25,7 +25,7 @@ exclude: ['styles', 'scripts', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp
 
 # Force inclusion of directories and/or files in the conversion.
 # .htaccess is a good example since dotfiles are excluded by default.
-include: ['apple-touch-icon-57x57.png', 'apple-touch-icon-60x60.png', 'apple-touch-icon-72x72.png', 'apple-touch-icon-76x76.png', 'apple-touch-icon-114x114.png', 'apple-touch-icon-120x120.png', 'apple-touch-icon-144x144.png', 'apple-touch-icon-152x152.png', 'apple-touch-icon-precomposed.png', 'apple-touch-icon.png', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'favicon-160x160.png', 'favicon-196x196.png', 'mstile-70x70.png', 'mstile-144x144.png', 'mstile-150x150.png', 'mstile-310x150.png', 'mstile-310x310.png', 'web.config' ]
+include: ['apple-touch-icon-57x57.png', 'apple-touch-icon-60x60.png', 'apple-touch-icon-72x72.png', 'apple-touch-icon-76x76.png', 'apple-touch-icon-114x114.png', 'apple-touch-icon-120x120.png', 'apple-touch-icon-144x144.png', 'apple-touch-icon-152x152.png', 'apple-touch-icon-precomposed.png', 'apple-touch-icon.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'favicon-160x160.png', 'favicon-196x196.png', 'mstile-70x70.png', 'mstile-144x144.png', 'mstile-150x150.png', 'mstile-310x150.png', 'mstile-310x310.png', 'web.config', 'brand' ]
 
 # Default post path style
 # date  /:categories/:year/:month/:day/:title.html
