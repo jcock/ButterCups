@@ -9,7 +9,7 @@
 <meta property="og:title" content="{{ site.name }}" />
 <meta property="og:description" content="{{ site.description }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
-<meta property="og:image" content="{{ site.url }}/favicon-196x196.png" />
+<meta property="og:image" content="{{ site.url }}/apple-touch-icon-152x152.png" />
 <meta property="og:url" content="{{ site.url }}" />
 
 {% if site.author.google_verify %}<meta name="google-site-verification" content="{{ site.author.google_verify }}" />{% endif %}
@@ -17,16 +17,11 @@
 {% if site.author.google_plus %}<link rel="author" href="https://google.com/{{ site.author.google_plus }}?rel=author" />{% endif %}
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} &bull; {{ site.name }}{% else %}{{ site.name }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:title" content="{{ site.name }}">
+<meta name="twitter:description" content="{{ site.description }}">
 {% if site.author.twitter %}<meta name="twitter:site" content="@{{ site.author.twitter }}">{% endif %}
-{% if page.projimage %}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ site.url }}/images/{{ page.projimage }}">
-{% else %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ site.url }}/favicon-196x196.png">
-{% endif %}
+<meta name="twitter:image" content="{{ site.url }}/apple-touch-icon-152x152.png">
 
 {% include typekit.html %}
 

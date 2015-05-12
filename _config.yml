@@ -23,7 +23,7 @@ exclude: ['styles', 'scripts', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp
 
 # Force inclusion of directories and/or files in the conversion.
 # .htaccess is a good example since dotfiles are excluded by default.
-include: ['apple-touch-icon-57x57.png', 'apple-touch-icon-60x60.png', 'apple-touch-icon-72x72.png', 'apple-touch-icon-76x76.png', 'apple-touch-icon-114x114.png', 'apple-touch-icon-120x120.png', 'apple-touch-icon-144x144.png', 'apple-touch-icon-152x152.png', 'apple-touch-icon-precomposed.png', 'apple-touch-icon.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'favicon-160x160.png', 'favicon-196x196.png', 'mstile-70x70.png', 'mstile-144x144.png', 'mstile-150x150.png', 'mstile-310x150.png', 'mstile-310x310.png', 'web.config', 'brand' ]
+include: ['apple-touch-icon-57x57.png', 'apple-touch-icon-60x60.png', 'apple-touch-icon-72x72.png', 'apple-touch-icon-76x76.png', 'apple-touch-icon-114x114.png', 'apple-touch-icon-120x120.png', 'apple-touch-icon-144x144.png', 'apple-touch-icon-152x152.png', 'apple-touch-icon-precomposed.png', 'apple-touch-icon.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'mstile-70x70.png', 'mstile-144x144.png', 'mstile-150x150.png', 'mstile-310x150.png', 'mstile-310x310.png', 'web.config', 'brand' ]
 
 # Default post path style
 # date  /:categories/:year/:month/:day/:title.html
