@@ -160,17 +160,6 @@ module.exports = function (grunt) {
         dest: '<%= yeoman.dist %>'
       },
       html: '<%= yeoman.dist %>/index.html'
-      /*options: {
-        dest: '<%= yeoman.dist %>',
-        flow: {
-          steps: {
-            js: ['concat'],
-            css: ['concat', 'cssmin']
-          },
-          post: {}
-        }
-      },
-      html: '<%= yeoman.dist %>/index.html',*/
     },
     usemin: {
       options: {
@@ -344,7 +333,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'newer:imagemin',
+    'imagemin',
     'svgmin',
     'filerev',
     'usemin',

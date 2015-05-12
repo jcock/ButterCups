@@ -169,7 +169,7 @@ dl {
 		@include transition(background 200ms ease);
 
 		.fa {
-			font-size: 1em;
+			font-size: 1.75em;
 		}
 	}
 
@@ -302,6 +302,17 @@ dl {
 		span {
 			@include burger-to-cross;
 		}
+	}
+}
+
+
+
+// Brand
+.brand {
+	.no-js & {
+		background: url(/img/brand/butter-cups.png) no-repeat 50% 50%;
+		width: 575px;
+		height: 150px;
 	}
 }
 
