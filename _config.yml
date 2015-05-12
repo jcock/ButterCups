@@ -3,8 +3,8 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Butter Cups
-description: Butter Cups. Gourmet Cupcakes.
+name: Butter Cups ♥ Gourmet Cupcakes
+description: Gourmet cupcakes made to order.
 url: http://www.buttercups.rocks
 author:
   name: Lisa Link
@@ -13,9 +13,9 @@ author:
 
   facebook: pages/Butter-Cups/166201623532421
 
-  google_analytics: # UA-54478957-1
-  google_verify: # CqIX8qMP-9YzT5j6O2ITwq-p0RpcxkbA3UZeEwZcRJw
-  bing_verify: # D5EB4D7B4B2096C374CE2AEB1D6EDB32
+  google_analytics: UA-62869051-1
+  google_verify: kOxiDczM5Jal0oGlNIniuRGku0o2s6jvjE64uPnvODU
+  bing_verify: D5EB4D7B4B2096C374CE2AEB1D6EDB32
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and the styles/scripts directories.
